@@ -14,11 +14,9 @@ export default function SingleProduct({ product, products }) {
   const price = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'}).format(product.priceRange.minVariantPrice.amount);
   const image = product.images.edges[0].node.transformedSrc;
   const alt = product.images.edges[0].node.altText;
-  console.log(products)
   const relatedProducts = products.edges
     .filter(item => item.node.handle !== product.handle )
     .slice(0, 4);
-  console.log('related', relatedProducts)
   
   return (
     <div className="bg-white">
@@ -110,7 +108,7 @@ const gql = String.raw;
 
 const productsQuery = gql`
   query products {
-  products(first: 8) {
+  products(first: 12) {
     edges {
       node {
         handle
@@ -148,7 +146,7 @@ const singleProductQuery = gql`
       }
     }
   }
-  products(first: 6) {
+  products(first: 12) {
     edges {
       node {
         id

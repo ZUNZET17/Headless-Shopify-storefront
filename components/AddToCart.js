@@ -9,7 +9,7 @@ export default function AddToCart(props) {
   
   useEffect(() => {   
     setVariantId(props.id)
-  }, [])
+  }, [props.id])
 
   function increment () {
     event.preventDefault()
