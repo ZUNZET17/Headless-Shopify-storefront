@@ -6,7 +6,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 const navigation = [
-  { name: 'Products', href: '#products' },
+  { name: 'Products', href: '/products' },
   { name: 'Features', href: '#' },
   { name: 'Blog', href: '#' },
   { name: 'About us', href: '#' },
@@ -39,7 +39,7 @@ export default function Header() {
           </div>
           <div className="hidden smd:block md:ml-10 md:pr-4 md:space-x-8">
             {navigation.map((item) => (
-              <Link key={item.name} href="/products">
+              <Link key={item.name} href={item.href}>
                 <a className="font-medium text-gray-500 hover:text-lime-600/75">
                   {item.name}
                 </a>
