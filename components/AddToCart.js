@@ -8,7 +8,8 @@ export default function AddToCart(props) {
   let cartId;
   
   useEffect(() => {   
-    setVariantId(props.id)
+    setVariantId(props.id);
+    setQty(1);
   }, [props.id])
 
   function increment () {
