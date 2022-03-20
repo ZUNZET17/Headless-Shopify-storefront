@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -14,3 +18,38 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* Qty Button */
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-number-input input:focus {
+  outline: none !important;
+}
+
+.custom-number-input button:focus {
+  outline: none !important;
+}
+
+/* Hero section */
+/* .hero-section {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+@media screen and (min-width: 768px ) {
+  .hero-section {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 72vh;
+  }
+}
+
+@media screen and (min-width:1024px ) {
+  .hero-section {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40vw;
+  }
+} */
