@@ -39,8 +39,8 @@ export default function Header() {
           </div>
           <div className="hidden smd:block md:ml-10 md:pr-4 md:space-x-8">
             {navigation.map((item) => (
-              <Link href="/products">
-                <a key={item.name} className="font-medium text-gray-500 hover:text-lime-600/75">
+              <Link key={item.name} href="/products">
+                <a className="font-medium text-gray-500 hover:text-lime-600/75">
                   {item.name}
                 </a>
               </Link>
